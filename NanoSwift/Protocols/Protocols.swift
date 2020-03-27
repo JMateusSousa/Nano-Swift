@@ -66,11 +66,12 @@ class IFCEProfessor: Professor, CampusDelegate {
     }
     
     func campusRequestProf(campus: String, area: String) {
-        //  para evitar que o professor seja remanejado para
-        //  o atual campus e área dele.
-        //  Caso o campus solicite outro professor da mesma área.
         if campus == self.campusRelocation && area == self.area {
             self.changeCampus(campus: campus)
+
+            //  para evitar que o professor seja remanejado para
+            //  o atual campus e área dele.
+            //  Caso o campus solicite outro professor da mesma área.
             self.campusRelocation = ""
         }
     }
@@ -79,4 +80,5 @@ class IFCEProfessor: Professor, CampusDelegate {
         self.campus = campus
         print("\(self.name) foi relocado para o campus \(campus)")
     }
+    
 }

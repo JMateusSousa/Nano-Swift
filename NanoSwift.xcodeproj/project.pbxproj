@@ -106,7 +106,7 @@
 		7C22B0C0242CEB9C00048A0F = {
 			isa = PBXGroup;
 			children = (
-				7C22B101242E8A9E00048A0F /* Sources */,
+				7C22B101242E8A9E00048A0F /* NanoSwift */,
 				7C22B0CA242CEB9D00048A0F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -158,7 +158,7 @@
 			path = Initialization;
 			sourceTree = "<group>";
 		};
-		7C22B101242E8A9E00048A0F /* Sources */ = {
+		7C22B101242E8A9E00048A0F /* NanoSwift */ = {
 			isa = PBXGroup;
 			children = (
 				7C22B0CB242CEB9D00048A0F /* ClassAndStruct */,
@@ -166,7 +166,7 @@
 				7C22B0EE242E741100048A0F /* Closure */,
 				7C22B0FA242E747900048A0F /* Initialization */,
 			);
-			path = Sources;
+			path = NanoSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

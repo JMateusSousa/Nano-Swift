@@ -25,17 +25,24 @@ class newMemberSousaFamily: SousaFamily {
         self.checkAge()
     }
     
-    func checkAge(){
+    func checkAge() {
         if flag(self.olderAge, self.age){
             self.changeOlderAge(newAge: self.age)
             nothing{
                 print("Agora o mais velho é \(self.name) com \(self.olderAge)")
             }
+            anotherNothing(print("Agora o mais velho é \(self.name) com \(self.olderAge)"))
         }
     }
     
-    func nothing(closure: () -> Void){
+    func nothing(closure: () -> Void) {
         closure()
+    }
+    
+    
+    // autoclosure example
+    func anotherNothing(_ print: @autoclosure () -> Void) {
+        print()
     }
     
     func sayHiNewMember() {
@@ -47,3 +54,17 @@ class newMemberSousaFamily: SousaFamily {
     
     var flag: (Int, Int) -> Bool = { $0 < $1 }
 }
+
+//  * Closure captures values from context
+//      - Uma função que recebe um parâmetro e retorna uma closure.
+//        O valor do parâmetro será permanente para o espaço de memória
+//        que recebeu essa closure.
+//
+//  * Closure reference type
+//      - Se outro espaço de memória receber outro espaço que aponta para
+//        uma closure os dois espaços terão a mesma referência.
+//
+//  * Autoclosure
+//      - Apenas uma forma de passar uma closure para uma função na forma
+//        sem ter que utilizar chaves. OBS.: Deixa o código mais light!
+
